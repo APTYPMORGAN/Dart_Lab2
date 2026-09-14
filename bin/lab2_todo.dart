@@ -4,12 +4,13 @@ import 'dart:io';
 void AddToDo(List<Todo> todos) {
   stdout.write('Название задачи: ');
   String? input = stdin.readLineSync();
+
   if (input == null || input.trim().isEmpty) {
     print('Ошибка: название не может быть пустым');
     return;
   }
-  int newId = todos.isEmpty ? 1 : todos.last.id + 1;
-  todos.add(Todo(id: newId, title: input.trim()));
+  //int newId = todos.isEmpty ? 1 : todos.last.id + 1;
+  todos.add(Todo(title: input.trim()));
   print('Задача добавлена');
 }
 
